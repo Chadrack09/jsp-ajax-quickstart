@@ -3,15 +3,12 @@ package za.ac.cput.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import za.ac.cput.student.Student;
 import static za.ac.cput.student.StudentDAO.select;
 /**
  *
@@ -27,7 +24,6 @@ public class Select extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
     PrintWriter out = response.getWriter();
-    List<Student> list = new ArrayList<>();
     
     try {
 
